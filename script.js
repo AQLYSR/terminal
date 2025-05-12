@@ -17,7 +17,7 @@ jQuery(function($, undefined) {
             term.echo('  [[b;lime;]help]     - Display this help message.');
         } else if (command === 'about') {
             // Customize this section with your information
-            term.echo('[[b;white;]Hello! I\'m [Your Name]!]');
+            term.echo('[[b;white;]Hello! I\'m Aqil');
             term.echo('');
             term.echo('I am a passionate [Your Profession/Role], specializing in [Your Area of Expertise].');
             term.echo('I love [Your Hobby/Interest] and enjoy [Another Hobby/Interest].');

@@ -1,6 +1,6 @@
 body {
     background-color: #000; /* Black background for the terminal look */
-    color: #0F0; /* Green text color */
+    color: #0F0; 
     font-family: '0xProto', 'Fira Code', 'Roboto Mono', 'Consolas', monospace; /* Monospace font for code-like feel */
     margin: 0;
     padding: 20px; /* Padding around the terminal */
@@ -12,7 +12,7 @@ body {
 }
 @font-face {
 	font-family: '0xProto';
-	src: url('../fonts/0xProto/0xProtoNerdFont-Regular.ttf') format('ttf');
+	src: url('../fonts/0xProto/0xProtoNerdFont-Regular.ttf') format('truetype');
 	font-weight: normal;
 	font-style: normal;
 	font-display: swap;
@@ -20,7 +20,7 @@ body {
 
 @font-face {
 	font-family: '0xProto';
-	src: url('../fonts/0xProto/0xProtoNerdFont-Bold.ttf') format('ttf');
+	src: url('../fonts/0xProto/0xProtoNerdFont-Bold.ttf') format('truetype');
 	font-weight: bold;
 	font-style: normal;
 	font-display: swap;
@@ -28,9 +28,9 @@ body {
 
 @font-face {
 	font-family: '0xProto';
-	src: url('../fonts/0xProto/0xProtoNerdFont-Italic.ttf') format('ttf');
-	font-weight: italic;
-	font-style: normal;
+	src: url('../fonts/0xProto/0xProtoNerdFont-Italic.ttf') format('truetype');
+	font-weight: normal;
+	font-style: italic;
 	font-display: swap;
 }
 #terminal {
@@ -38,8 +38,7 @@ body {
     max-width: 900px; /* Maximum width for larger screens */
     height: 70vh; /* Terminal height, adjusts with viewport height */
     background-color: #000;
-    border: 2px solid #0F0; /* Green border */
-    box-shadow: 0 0 15px rgba(0, 255, 0, 0.5); /* Subtle green glow */
+    border: 2px solid #0F0;
     padding: 10px;
     box-sizing: border-box; /* Include padding in element's total width and height */
     overflow: auto; /* Add scrollbars if content overflows */
@@ -48,17 +47,22 @@ body {
 /* --- jQuery Terminal Emulator Specific Styles Overrides --- */
 
 /* General terminal styling */
+#terminal .terminal-input,
+#terminal .terminal-output,
+#terminal .terminal-prompt{
+	font-size: 1.3em !important;
+}
 .terminal {
     --background: #000;
     --color: #0F0;
-    --font-size: 10000px; !important
+    --size: 2 !important;
     --font-family: '0xProto', 'Fira Code', 'Roboto Mono', 'Consolas', monospace;
 }
 
 /* Blinking cursor */
 .terminal-cursor {
     background-color: #0F0 !important;
-    box-shadow: 0 0 5px #0F0;
+    box-shadow: 0 0 5px #FFF;
 }
 
 /* Prompt and input text color */
